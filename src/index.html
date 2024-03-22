@@ -1,0 +1,116 @@
+<html>
+	<head>
+		<style>
+									*{margin: 0; padding: 0; outline: none; border: none; text-decoration: none; box-sizing: border-box; font-family: sans-serif;}
+			body{background: #e0e0e0;}
+			.container{ display: flex; }
+			nav{ position: relative; top: 0; bottom: 0; height: 100vh; left: 0; background: #fff; width: 280px; overflow: hidden; box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);}
+			.logo { text-align: center; display: flex; margin: 10px 0 0 10 px;}
+			.logo img{ width: 45px; height: 45px; border-radius: 50%;}
+			.logo span{ font-weight: bold; padding-left: 15px;font-size: 18px; text-transform: uppercase;}
+			a{ position: relative; color: rgb(85, 83, 83); font-size: 14px; display: table; width: 280px; padding: 10px;}
+			a:hover{ background: #eee;}
+			.logout{ position: absolute; bottom: 0;}
+			.main{ position: relative; padding: 20px; width: 100%;}
+			.submain{ margin-top:20px ; text-transform: capitalize;}
+			.componentheader{ width: 100%; padding: 10px 10px 30px 10px; margin-top: 10px; background: #fff; border-radius: 10px; box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);}
+			.componentheader ul{ list-style: none; display: flex;}
+			.componentheader ul li{ margin: 10px; color: gray; cursor: pointer;}
+			.componentheader ul .active{ color: red; border-bottom: 1px solid #233;}
+			.component{ width: 100%; padding: 15px; margin: 0px; border-radius: 10px; background: rgb(235, 233, 233); box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);}
+			.component-unhealthy{ width: 100%; padding: 15px; margin: 0px; border-radius: 10px; background: rgb(250, 172, 172); box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);}
+			.component-healthy{ width: 100%; padding: 15px; margin: 0px; border-radius: 10px; background: rgb(181, 255, 183); box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);}
+			.component span{ font-size: 16px; margin-top: 5px;}
+			.component-unhealthy span{ font-size: 16px; margin-top: 5px; border: 1px solid black; font-weight: bold;}
+			.component-healthy span{ font-size: 16px; margin-top: 5px; border: 1px solid black; font-weight: bold;}
+			.component-unhealthy details{ background: #ffeded; }
+			.component-healthy details{ background: #e9fff0; }
+			.component details{ background: #fff; }
+			.html{ color: rgb(25, 94, 54);}
+			.css{  color: rgb(104, 179, 35);}
+			.js{ color: rgb(28, 98, 179);}
+		</style>
+		<title>Dashboard</title>
+	</head>
+	<body>
+		<div class="container">
+			<section class="main">
+				<section class="submain">
+					<h1>Component Health</h1>
+					<div class="componentheader"><div class="componentgroup">
+			<div  class=component-unhealthy>
+			<h2>USR</h2>
+			<span>1/4 Health Checks Passed</span>
+			<details>
+				<summary>Health Checks</summary>
+				<table>
+			<tr>
+				<th>Name</th>
+				<th>IsHealthy</th>
+				<th>Threshold</th>
+				<th>Value</th>
+			<tr><tr>
+					<td>CPU</td>    
+					<td>False</td><td>90</td><td>95</td>
+					</tr><tr>
+					<td>Memory</td>
+					<td>True</td><td>1000</td><td>5000</td>
+					</tr><tr>
+						<td>RPS</td>
+						<td>False</td><td>100</td><td>300</td>
+					</tr><tr>
+						<td>FarmHealthScore</td>
+						<td>False</td><td>3</td><td>5</td>
+					</tr></table>
+		</details>
+		<details>
+			<summary>Diagnostics</summary>
+		</details>
+		</div><div class="component-unhealthy">
+								<h2>SQL</h2>
+								<span>5/6 Health Checks Passed</span>
+								<details>
+									<summary>Health Checks</summary>
+									<button>More Info</button>
+								</details>
+								<details>
+									<summary>Diagnostics</summary>
+								</details>
+							</div><div class="component-healthy">
+								<h2>Network</h2>
+								<span>10/10 Health Checks Passed</span>
+								<details>
+									<summary>Health Checks</summary>
+									<button>More Info</button>
+								</details>
+								<details>
+									<summary>Diagnostics</summary>
+								</details>
+							</div><div class="component">
+								<h2>Cache</h2>
+								<span>Unable to complete checks</span>
+								<details>
+									<summary>Health Checks</summary>
+									<button>More Info</button>
+								</details>
+							</div><div class="component">
+								<h2>Directory</h2>
+								<span>Unable to complete checks</span>
+								<details>
+									<summary>Health Checks</summary>
+									<button>More Info</button>
+								</details>
+							</div><div class="component">
+								<h2>Storage</h2>
+								<span>Unable to complete checks</span>
+								<details>
+									<summary>Health Checks</summary>
+									<button>More Info</button>
+								</details>
+							</div></div>                             
+					</div>
+				</section>
+			</section>
+		</div>
+	</body>
+</html>
